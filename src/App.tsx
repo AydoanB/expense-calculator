@@ -27,7 +27,7 @@ function App() {
   const components = [];
 
   for (const expense of expenses) {
-    components.push(<ExpenseItem title={expense.title} date = {expense.date} amount={expense.amount}></ExpenseItem>)
+    components.push(<ExpenseItem key={expense.id} title={expense.title} date = {expense.date} amount={expense.amount}></ExpenseItem>)
   }
   return (
     <div className="App">
