@@ -1,8 +1,8 @@
-import ExpenseDate from '../expenseDate/ExpenseDate';
+import ExpenseDate from '../ExpenseDate/ExpenseDate';
 import './ExpenseItem.css'
 import { useState } from 'react'
 
-interface ExpenseProps {
+export interface ExpenseProps {
     title: string,
     date: Date,
     amount: number,
