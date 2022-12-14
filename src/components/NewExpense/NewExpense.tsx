@@ -2,11 +2,14 @@ import { ExpenseProps } from '../ExpenseItem/ExpenseItem';
 import ExpenseForm from './ExpenseForm';
 import './NewExpense.css'
 
+
+
 function NewExpense() {
-    function handleExpenseDataHandler(enteredExpenseData: ExpenseProps){
+
+    const expenseDataHandler = function (enteredExpenseData: ExpenseProps) {
         const expenseData = {
             ...enteredExpenseData,
-            id: Math.random.toString()
+            id: Math.random().toString()
         };
 
         console.log(expenseData);
@@ -14,7 +17,7 @@ function NewExpense() {
 
     return (
         <div className="new-expense">
-            <ExpenseForm onSaveExpenseData={handleExpenseDataHandler} />
+            <ExpenseForm onSaveExpenseData={expenseDataHandler} />
         </div>
     )
 }

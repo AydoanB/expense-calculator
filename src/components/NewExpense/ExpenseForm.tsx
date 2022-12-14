@@ -1,28 +1,29 @@
 import './ExpenseForm.css';
 import SingleInput from './SingleInput';
-import { useState } from 'react'
+import { useState } from 'react';
 import { ExpenseProps } from '../ExpenseItem/ExpenseItem';
 
 
-function ExpenseForm(onSaveExpenseData: any) {
+function ExpenseForm(props: {onSaveExpenseData: any}) {
 
     const [enteredTitle, setEnteredTtile] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
 
-    const submitForm = (event: any) => {
+    function submitForm(event: any): void{
         event.preventDefault();
 
         const expenseData = {
             title: enteredTitle,
             amount: enteredAmount as unknown as number,
             date: new Date(enteredDate),
-        }
+        };
+
         setEnteredTtile('');
         setEnteredAmount('');
         setEnteredDate('');
 
-        onSaveExpenseData(expenseData as ExpenseProps);
+        props.onSaveExpenseData(expenseData as ExpenseProps);
     }
 
     return (
