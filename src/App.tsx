@@ -1,5 +1,6 @@
 import './App.css';
 import ExpenseItem from './components/ExpenseItem/ExpenseItem';
+import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 
 function App() {
@@ -25,16 +26,11 @@ function App() {
     },
   ];
 
-  const components = [];
-
-  for (const expense of expenses) {
-    components.push(<ExpenseItem key={expense.id} title={expense.title} date = {expense.date} amount={expense.amount}></ExpenseItem>)
-  }
   return (
     <div className="App">
       <h2>Let's get started!</h2>
-      <NewExpense></NewExpense>
-      {components}
+      <NewExpense />
+      <Expenses items={expenses}/>
     </div>
   );
 }
