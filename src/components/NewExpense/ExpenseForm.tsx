@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { ExpenseProps } from '../ExpenseItem/ExpenseItem';
 
 
-function ExpenseForm(props: {onSaveExpenseData: any}) {
+function ExpenseForm(props: {onSaveExpenseData: (expenseData: any)=> void}) {
 
     const [enteredTitle, setEnteredTtile] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
