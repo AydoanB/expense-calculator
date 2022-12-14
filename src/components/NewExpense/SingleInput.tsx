@@ -1,23 +1,20 @@
 import './SingleInput.css'
-import { useState } from 'react'
 
 
 interface InputProps {
     label: string,
     type: string,
     inputData: any,
+    defaultValue: string | number
 }
 
-function SingleInput({ label, type, inputData }: InputProps) {
-    const [inputFieldText, setInputFieldText] = useState('');
+function SingleInput({ label, type, inputData, defaultValue }: InputProps) {
 
-const handleChange = () =>{
-    setInputFieldText(inputData);
-}
 
-    return (<div onChange={handleChange} className='new-expense__control'>
+
+    return (<div onChange={inputData} className='new-expense__control'>
         <label>{label}</label>
-        <input type={type} />
+        <input type={type} defaultValue={defaultValue} />
     </div>)
 }
 
