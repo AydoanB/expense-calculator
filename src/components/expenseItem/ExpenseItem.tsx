@@ -3,6 +3,7 @@ import './ExpenseItem.css'
 import { useState } from 'react'
 
 export interface ExpenseProps {
+    id: string,
     title: string,
     date: Date,
     amount: number,
