@@ -1,18 +1,16 @@
-import { ExpenseProps } from '../ExpenseItem/ExpenseItem';
+import { ExpenseProps } from '../../compiler/types';
 import ExpenseForm from './ExpenseForm';
 import './NewExpense.css'
 
-
-
 function NewExpense() {
 
-    const expenseDataHandler = function (enteredExpenseData: ExpenseProps) {
+    const expenseDataHandler = (enteredExpenseData: ExpenseProps) => {
         const expenseData = {
             ...enteredExpenseData,
             id: Math.random().toString()
         };
 
-        console.log(expenseData);
+        return expenseData;
     }
 
     return (

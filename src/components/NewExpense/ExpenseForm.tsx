@@ -1,16 +1,16 @@
 import './ExpenseForm.css';
 import SingleInput from './SingleInput';
 import { useState } from 'react';
-import { ExpenseProps } from '../ExpenseItem/ExpenseItem';
+import { ExpenseProps } from '../../compiler/types';
 
 
-function ExpenseForm(props: {onSaveExpenseData: (expenseData: any)=> void}) {
+function ExpenseForm(props: { onSaveExpenseData: (expenseData: any) => void }) {
 
     const [enteredTitle, setEnteredTtile] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
 
-    function submitForm(event: any): void{
+    function submitForm(event: any): void {
         event.preventDefault();
 
         const expenseData = {

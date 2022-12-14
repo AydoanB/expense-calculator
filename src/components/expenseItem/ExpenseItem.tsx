@@ -1,13 +1,7 @@
 import ExpenseDate from '../ExpenseDate/ExpenseDate';
 import './ExpenseItem.css'
 import { useState } from 'react'
-
-export interface ExpenseProps {
-    id: string,
-    title: string,
-    date: Date,
-    amount: number,
-};
+import { ExpenseProps } from '../../compiler/types';
 
 function ExpenseItem({ title, amount, date }: ExpenseProps) {
     const [newTitle, setTitle] = useState<string>(title);

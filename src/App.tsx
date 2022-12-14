@@ -1,5 +1,4 @@
 import './App.css';
-import ExpenseItem from './components/ExpenseItem/ExpenseItem';
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 
@@ -30,7 +29,7 @@ function App() {
     <div className="App">
       <h2>Let's get started!</h2>
       <NewExpense />
-      <Expenses items={expenses}/>
+      <Expenses items={expenses} />
     </div>
   );
 }
