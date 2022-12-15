@@ -25,9 +25,9 @@ function ExpenseForm(props: { onSaveExpenseData: (expenseData: any) => void }) {
     return (
         <form onSubmit={submitForm}>
             <div className='new-expense__controls'>
-                <SingleInput defaultValue={enteredTitle} inputData={() => setEnteredTtile('')} type='text' label='Title' />
-                <SingleInput defaultValue={enteredAmount} inputData={() => setEnteredAmount('')} type='number' label='Amount' />
-                <SingleInput defaultValue={enteredDate} inputData={() => setEnteredDate('')} label='Date' type='date' />
+                <SingleInput defaultValue={enteredTitle} inputData={(e: any) => setEnteredTtile(e.target.value)} type='text' label='Title' />
+                <SingleInput defaultValue={enteredAmount} inputData={(e: any) => setEnteredAmount(e.target.value)} type='number' label='Amount' />
+                <SingleInput defaultValue={enteredDate} inputData={(e: any) => setEnteredDate(e.target.value)} label='Date' type='date' />
             </div>
             <div className='new-expense__actions'>
                 <button type='submit'>Add an expense</button>

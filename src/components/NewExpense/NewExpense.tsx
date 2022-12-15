@@ -2,7 +2,7 @@ import { ExpenseProps } from '../../compiler/types';
 import ExpenseForm from './ExpenseForm';
 import './NewExpense.css'
 
-function NewExpense() {
+function NewExpense(props: { onAddExpenseData: (expenseData: ExpenseProps) => any }) {
 
     const expenseDataHandler = (enteredExpenseData: ExpenseProps) => {
         const expenseData = {
@@ -10,7 +10,7 @@ function NewExpense() {
             id: Math.random().toString()
         };
 
-        return expenseData;
+        props.onAddExpenseData(expenseData)
     }
 
     return (
