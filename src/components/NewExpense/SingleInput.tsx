@@ -1,6 +1,5 @@
 import './SingleInput.css'
 
-
 interface InputProps {
     label: string,
     type: string,
@@ -9,8 +8,6 @@ interface InputProps {
 }
 
 function SingleInput({ label, type, inputData, defaultValue }: InputProps) {
-
-
 
     return (<div onChange={inputData} className='new-expense__control'>
         <label>{label}</label>
